@@ -1,26 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<html>
-	<head>
-    	<meta charset="UTF-8">
-    	<link rel="stylesheet" type="text/css" href="styls.css">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<script defer src="js/Math.json"></script>
-    	<title>Задание 6</title>
-    </head>
-    <body style="background-image: url('https://butovskiy.github.io/First-website/img/2.1.jpg');">
-    	<p><div class="body" align="center">
-    		<form class="container row" style="display: flex; width: 500px; justify-content: center;">
-    			<div class="form-group">
-    				<br><h3>Калькулятор стоимости</h3></p>
-    				<input name="price" type="text" class="form-control" id="price" placeholder="Введите цену">
-    				<input name="count" type="text" class="form-control" id="price" placeholder="Введите количество">
-    				<button id="calculateResult" type="button" class="btn btn-dark container" onclick="return click1();">Узнать</button></p>
-    				Результат: 
-    				<div class="result" id="result"></div>
-    			</div>
-    		</form>
-    	</div>
-    </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script defer src="js/Math.json"></script> 
+    <title>Задание 6</title>
+</head>
+<body style="background-image: url('https://butovskiy.github.io/First-website/img/2.1.jpg');">
+    <p><div class="body">
+        <div id="calc">
+            <form class="container row" style="display: flex; width: 400px; margin: 0 auto;">
+                <div class="form-group">
+                    <br><h3><label>Калькулятор стоимости фотосессии</label></h3></p>
+
+                        <select name="myselect" class="form-control">
+                            <option value="1" selected>Одежда магазина</option>
+                            <option value="2">Индивидуальный портрет</option>
+                            <option value="3">Крупное мероприятие</option>
+                        </select> 
+
+                        <div class="pis d-none" id="myradios">
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="radio1" name="myradio" value="r1" checked>
+                                <label class="custom-control-label" for="radio1">В студии</label>
+                            </div>
+                            
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="radio2" name="myradio" value="r2">
+                                <label class="custom-control-label" for="radio2">На улице</label>
+                            </div>
+                            
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="radio3" name="myradio" value="r3">
+                                <label class="custom-control-label" for="radio3">В неспециализированном помещении</label>
+                            </div>
+                    
+                        </div>
+                        <div id="mycheck" class="d-none">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check" name="mycheck">
+                                <label class="custom-control-label" for="check">Обработка</label>
+                            </div>
+                        </div>
+                    <input name="count" type="text" class="form-control" id="count" placeholder="Введите количество часов">         
+                </div>
+              
+            </form>   
+            <h5 align="center">Итоговая цена:</h5> 
+        <div class="result" id="result" align="center"></div>
+     </div> 
+    </div>
+</body>
+</html> 
